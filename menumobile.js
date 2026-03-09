@@ -1,11 +1,18 @@
 const btn = document.getElementById('menu-btn');
 const menu = document.getElementById('nav-menu');
 
-    btn.addEventListener('click', () => {
-    // Sprawdza czy menu jest ukryte i zmienia na widoczne (lub odwrotnie)
-    if (menu.style.display === 'block') {
-    menu.style.display = 'none';
-} else {
-    menu.style.display = 'block';
-}
+btn.addEventListener('click', () => {
+    menu.classList.toggle('show');
+});
+
+document.querySelectorAll('ol > li > a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const parentLi = link.parentElement;
+        const submenu = parentLi.querySelector('ul');
+
+        if (submenu && window.innerWidth <= 768) {
+            e.preventDefault(); // blokuje domyślne kliknięcie
+            parentLi.classList.toggle('active'); // pokaz/ukryj submenu
+        }
+    });
 });
