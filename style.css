@@ -3,7 +3,7 @@ body {
 }
 .top-bar {
     position: relative;
-    width: 100%;
+    max-width: 100%;
     height: 40px;
     background-color: lightgreen;
     overflow: hidden;
@@ -12,6 +12,7 @@ body {
     justify-content: center;
     padding: 0 10px;
     box-sizing: border-box;
+    white-space: normal;
 }
 
 .scrolling-text span {
@@ -54,11 +55,10 @@ body {
     100% { opacity: 0; pointer-events: none; }
 }
 /* MEDIA QUERY dla ekranów mobilnych */
-@media (max-width: 480px) {
-    .top-bar {
-        height: 50px;           /* trochę wyższy dla dotyku */
-    }
+@media (max-width: 300px) {
     .scrolling-text span {
-        font-size: 13px;       /* zmniejszenie tekstu, żeby zmieścił się na ekranie */
+        font-size: 11px;
+
+
     }
 }
