@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/components.css">
-
 </head>
 <body>
 <header>
@@ -22,9 +21,8 @@
         </div>
     </div>
 
-    <button class="hamburger" id="menu-btn">☰ Menu</button>
-
-    <nav id="nav-menu">
+    <!-- Desktop menu -->
+    <nav id="desktop-nav-menu">
         <ol>
             <li><a href="#">Rodzaje olejków</a>
                 <ul>
@@ -36,7 +34,6 @@
                     <li>Żywiczne</li>
                 </ul>
             </li>
-
             <li><a href="#">Zastosowanie</a>
                 <ul>
                     <li>Stres i emocje</li>
@@ -47,7 +44,6 @@
                     <li>Mięśnie i stawy</li>
                 </ul>
             </li>
-
             <li><a href="#">Jak stosować</a>
                 <ul>
                     <li>Dyfuzja</li>
@@ -56,7 +52,6 @@
                     <li>Kąpiel</li>
                 </ul>
             </li>
-
             <li><a href="#">Bezpieczeństwo</a>
                 <ul>
                     <li>Rozcieńczanie</li>
@@ -65,7 +60,6 @@
                     <li>W ciąży</li>
                 </ul>
             </li>
-
             <li><a href="#">Baza wiedzy</a>
                 <ul>
                     <li>Czym są olejki eteryczne</li>
@@ -75,9 +69,67 @@
             </li>
         </ol>
     </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenuToggle">
+        <input type="checkbox" id="mobilemenu">
+        <label for="mobilemenu" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav id="mobile-nav-menu">
+            <button id="close-mobile-menu">✖ Zamknij</button>
+            <ol>
+                <li><a href="#">Rodzaje olejków</a>
+                    <ul>
+                        <li><a href="pages/cytrusowe.html">Cytrusowe</a></li>
+                        <li>Kwiatowe</li>
+                        <li>Drzewne</li>
+                        <li>Ziołowe</li>
+                        <li>Korzenne</li>
+                        <li>Żywiczne</li>
+                    </ul>
+                </li>
+                <li><a href="#">Zastosowanie</a>
+                    <ul>
+                        <li>Stres i emocje</li>
+                        <li>Sen</li>
+                        <li>Układ oddechowy</li>
+                        <li>Układ trawienny</li>
+                        <li>Skóra</li>
+                        <li>Mięśnie i stawy</li>
+                    </ul>
+                </li>
+                <li><a href="#">Jak stosować</a>
+                    <ul>
+                        <li>Dyfuzja</li>
+                        <li>Inhalacja</li>
+                        <li>Masaż</li>
+                        <li>Kąpiel</li>
+                    </ul>
+                </li>
+                <li><a href="#">Bezpieczeństwo</a>
+                    <ul>
+                        <li>Rozcieńczanie</li>
+                        <li>Przeciwskazania</li>
+                        <li>Dla dzieci</li>
+                        <li>W ciąży</li>
+                    </ul>
+                </li>
+                <li><a href="#">Baza wiedzy</a>
+                    <ul>
+                        <li>Czym są olejki eteryczne</li>
+                        <li>Jak powstają olejki eteryczne</li>
+                        <li>Jak wybrać olejek eteryczny</li>
+                    </ul>
+                </li>
+            </ol>
+        </nav>
+    </div>
 </header>
 <script src="topbar.js"></script>
-
-
+<script src="menumobile.js"></script>
 </body>
 </html>

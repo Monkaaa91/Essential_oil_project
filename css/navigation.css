@@ -1,65 +1,63 @@
-/* --- MENU GŁÓWNE --- */
-ol {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+/* --- Desktop menu --- */
+#desktop-nav-menu {
+    display: flex;
+    justify-content: center; /* wycentrowanie całego menu */
+    background: #fff;
+    border-bottom: 1px solid #eee;
     font-size: 18px;
     height: 3em;
     line-height: 3em;
-    text-align: center;
-    background-color: #ffffff;
+}
+
+#desktop-nav-menu ol {
+    list-style: none;
     display: flex;
-    justify-content: center;
-    border-bottom: 1px solid #eee;
+    padding: 0;
+    margin: 0;
 }
 
-ol > li {
-    background-color: #ffffff;
+#desktop-nav-menu > ol > li {
     position: relative;
-    transition: background-color 0.3s;
+    background: #fff;
+    transition: background 0.3s;
 }
 
-ol > li > a {
+#desktop-nav-menu > ol > li > a {
     display: block;
+    padding: 0 20px;
     color: #308702;
     text-decoration: none;
-    padding: 0 20px;
 }
 
-ol > li:hover {
-    background-color: #c7ffbe;
+#desktop-nav-menu > ol > li:hover {
+    background: #c7ffbe;
 }
 
-ol > li:hover > a {
+#desktop-nav-menu > ol > li:hover > a {
     color: #1ca100;
 }
 
-/* --- SUBMENU --- */
-ol > li > ul {
-    list-style-type: none;
+/* Podmenu desktop */
+#desktop-nav-menu ul {
+    list-style: none;
     padding: 0;
     margin: 0;
-    display: block;
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
     min-width: 100%;
-    width: max-content;
-    background-color: #ffffff;
-    border: 1px solid #e6e6e6;
+    background: #fff;
+    border: 1px solid #eee;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     z-index: 999;
-    max-height: 0; /* dla mobile */
-    overflow: hidden;
-    transition: max-height 0.3s ease;
 }
 
-ol > li:hover > ul {
-    display: block; /* desktop hover */
-    max-height: 1000px; /* duża wartość by hover działał */
+#desktop-nav-menu li:hover > ul {
+    display: block;
 }
 
-ol > li > ul > li {
+#desktop-nav-menu > ol > li > ul > li {
     line-height: 2.5em;
     text-align: left;
     border-bottom: 1px solid #f9f9f9;
@@ -69,94 +67,119 @@ ol > li > ul > li {
     cursor: pointer;
 }
 
-ol > li > ul > li:last-child {
+#desktop-nav-menu > ol > li > ul > li:last-child {
     border-bottom: none;
 }
 
-ol > li > ul > li:hover {
-    background-color: #f2fff0;
+#desktop-nav-menu > ol > li > ul > li:hover {
+    background: #f2fff0;
     color: #1ca100;
 }
 
-ol > li > ul > li a {
+#desktop-nav-menu > ol > li > ul > li a {
     color: inherit;
     text-decoration: none;
     display: block;
 }
 
-#nav-menu.show {
-    display: block !important;
+/* --- Mobile menu --- */
+#mobileMenuToggle {
+    display: none;
+    position: relative;
 }
 
-/* --- MOBILE --- */
+/* Hamburger */
+.hamburger-label {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    margin: 10px;
+}
+.hamburger-label span {
+    display: block;
+    height: 3px;
+    margin: 5px 0;
+    background: #308702;
+    transition: 0.4s;
+}
+
+/* Checkbox steruje widocznością menu */
+#mobileMenuToggle input#mobilemenu {
+    display: none;
+}
+
+#mobileMenuToggle input#mobilemenu:checked ~ #mobile-nav-menu {
+    display: block;
+}
+
+/* Mobile nav */
+#mobile-nav-menu {
+    display: none;
+    background: #fff;
+}
+
+#mobile-nav-menu ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#mobile-nav-menu li {
+    border-bottom: 1px solid #eee;
+}
+
+#mobile-nav-menu li > a {
+    display: block;
+    padding: 10px 15px;
+    color: #308702;
+    text-decoration: none;
+}
+
+#mobile-nav-menu li.active > ul {
+    display: block;
+}
+
+#mobile-nav-menu li > ul {
+    display: none;
+    padding-left: 15px;
+}
+
+/* Ukrycie hamburgera po rozwinięciu menu w mobile */
+#mobileMenuToggle input#mobilemenu:checked + .hamburger-label {
+    display: none;
+}
+#mobile-nav-menu ul,
+#mobile-nav-menu ol,
+#mobile-nav-menu li > ul {
+    list-style: none; /* usuwa bullets */
+    padding: 0;       /* usuwa wcięcia */
+    margin: 0;
+}
+#close-mobile-menu {
+    display: block;
+    background: none;
+    border: none;
+    color: #308702;
+    font-size: 20px;
+    padding: 10px 15px;
+    text-align: left;
+    cursor: pointer;
+}
+#close-mobile-menu:hover {
+    color: #1ca100;
+}
+
+/* Media queries */
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
-        width: 100%;
-        padding: 15px;
-        background: #308702;
-        color: white;
-        text-align: left;
-        font-size: 20px;
-        border: none;
-        cursor: pointer;
-    }
-
-    #nav-menu {
+    #desktop-nav-menu {
         display: none;
-        width: 100%;
-        background: #fff;
     }
-
-    #nav-menu.show {
-        display: block !important;
-    }
-
-    ol {
-        flex-direction: column;
-    }
-
-    ol > li {
-        width: 100%;
-        border-bottom: 1px solid #eee;
-        position: relative;
-    }
-
-    ol > li > ul {
-        position: relative !important; /* mobile relative */
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        border: none;
-        box-shadow: none;
-        background-color: #f9f9f9;
-        padding-left: 0;
-        margin: 0;
-        width: 100%;
-    }
-
-    ol > li.active > ul {
-        max-height: 500px; /* submenu rozwija się animacyjnie */
-    }
-
-    ol > li > ul > li {
-        padding: 10px 15px;
-        border-bottom: 1px solid #eee;
-        white-space: normal;
-    }
-
-    ol > li > ul > li:last-child {
-        border-bottom: none;
+    #mobileMenuToggle {
+        display: block;
     }
 }
-
-/* --- DESKTOP --- */
 @media (min-width: 769px) {
-    .hamburger {
+    #mobileMenuToggle {
         display: none;
-    }
-
-    #nav-menu {
-        display: block !important;
     }
 }
