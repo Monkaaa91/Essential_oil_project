@@ -55,10 +55,8 @@ body {
     100% { opacity: 0; pointer-events: none; }
 }
 /* MEDIA QUERY dla ekranów mobilnych */
-@media (max-width: 300px) {
+@media (max-width: 480px) {
     .scrolling-text span {
         font-size: 11px;
-
-
     }
 }
