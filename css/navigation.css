@@ -108,7 +108,7 @@
 }
 
 /* Checkbox steruje widocznością menu */
-#mobileMenuToggle input#mobilemenu {
+#mobileMenuToggle input#mobile-menu {
     display: none;
 }
 
@@ -157,6 +157,9 @@
 }
 #close-mobile-menu:hover {
     color: #1ca100;
+}
+#mobile-menu:checked ~ #mobile-nav-menu {
+    display: block;
 }
 
 /* Media queries */

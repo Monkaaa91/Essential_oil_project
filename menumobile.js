@@ -1,5 +1,5 @@
 // upewniamy się, że checkbox startuje odznaczony
-const mobileMenuCheckbox = document.getElementById('mobilemenu');
+const mobileMenuCheckbox = document.getElementById('mobile-menu');
 mobileMenuCheckbox.checked = false;
 
 // Rozwijanie podmenu w mobile
