@@ -1,7 +1,9 @@
-/* --- Desktop menu --- */
+/* =======================
+   DESKTOP MENU
+======================= */
 #desktop-nav-menu {
     display: flex;
-    justify-content: center; /* wycentrowanie całego menu */
+    justify-content: center; /* wycentrowanie */
     background: #fff;
     border-bottom: 1px solid #eee;
     font-size: 18px;
@@ -82,7 +84,9 @@
     display: block;
 }
 
-/* --- Mobile menu --- */
+/* =======================
+   MOBILE MENU
+======================= */
 #mobileMenuToggle {
     display: none;
     position: relative;
@@ -108,24 +112,20 @@
     display: none;
 }
 
-#mobileMenuToggle input#mobilemenu:checked ~ #mobile-nav-menu {
-    display: block;
-}
-
 /* Mobile nav */
 #mobile-nav-menu {
     display: none;
     background: #fff;
+    max-height: 90vh; /* ograniczenie wysokości */
+    overflow-y: auto;
 }
 
-#mobile-nav-menu ol {
-    list-style: none;
+#mobile-nav-menu ol,
+#mobile-nav-menu ul,
+#mobile-nav-menu li {
+    list-style: none; /* usuwa bullets */
     margin: 0;
     padding: 0;
-}
-
-#mobile-nav-menu li {
-    border-bottom: 1px solid #eee;
 }
 
 #mobile-nav-menu li > a {
@@ -135,26 +135,16 @@
     text-decoration: none;
 }
 
-#mobile-nav-menu li.active > ul {
-    display: block;
-}
-
 #mobile-nav-menu li > ul {
     display: none;
     padding-left: 15px;
 }
 
-/* Ukrycie hamburgera po rozwinięciu menu w mobile */
-#mobileMenuToggle input#mobilemenu:checked + .hamburger-label {
-    display: none;
+#mobile-nav-menu li.active > ul {
+    display: block;
 }
-#mobile-nav-menu ul,
-#mobile-nav-menu ol,
-#mobile-nav-menu li > ul {
-    list-style: none; /* usuwa bullets */
-    padding: 0;       /* usuwa wcięcia */
-    margin: 0;
-}
+
+/* Przycisk X */
 #close-mobile-menu {
     display: block;
     background: none;
@@ -167,6 +157,21 @@
 }
 #close-mobile-menu:hover {
     color: #1ca100;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    #desktop-nav-menu {
+        display: none;
+    }
+    #mobileMenuToggle {
+        display: block;
+    }
+}
+@media (min-width: 769px) {
+    #mobileMenuToggle {
+        display: none;
+    }
 }
 
 /* Media queries */
