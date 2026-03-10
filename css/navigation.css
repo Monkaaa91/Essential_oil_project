@@ -1,6 +1,15 @@
 /* =======================
    DESKTOP MENU
 ======================= */
+.menu-desktop{
+    display: flex;
+    align-items: center;
+}
+
+.search-icon{
+    padding: 10px;
+}
+
 #desktop-nav-menu {
     display: flex;
     justify-content: center; /* wycentrowanie */
@@ -9,6 +18,7 @@
     font-size: 18px;
     height: 3em;
     line-height: 3em;
+    flex: 1;
 }
 
 #desktop-nav-menu ol {
@@ -88,10 +98,35 @@
    MOBILE MENU
 ======================= */
 #mobileMenuToggle {
-    display: none;
     position: relative;
+    width: 100%;
+    padding: 0 10px;
 }
-
+.menu-container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.menu-container label {
+    display: inline-block;
+    height: 20px;
+    width: 25px;
+    cursor: pointer;
+}
+.menu-container label span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    margin: 5px;
+}
+.menu-container label span:last-child {
+    margin-right: 0;
+}
+.menu-container .search-icon {
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
 /* Hamburger */
 .hamburger-label {
     display: block;
@@ -188,6 +223,11 @@
 }
 @media (min-width: 769px) {
     #mobileMenuToggle {
+        display: none;
+    }
+}
+@media (max-width: 769px) {
+    .menu-desktop .search-icon {
         display: none;
     }
 }

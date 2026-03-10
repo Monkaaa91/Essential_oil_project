@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
+    <div id="search-bar-overlay" class="search-overlay">
+        <div class="search-input-wrapper">
+            <input type="text" id="global-search-input" placeholder="Wpisz czego szukasz (np. olejek cytrynowy)...">
+            <button id="close-search-bar">&times;</button>
+        </div>
+    </div>
 <header>
     <div class="top-bar">
         <div class="scrolling-text">
@@ -23,6 +29,7 @@
     </div>
 
     <!-- Desktop menu -->
+    <div class="menu-desktop">
     <nav id="desktop-nav-menu">
         <ol>
             <li><a href="#">Rodzaje olejków</a>
@@ -70,18 +77,29 @@
             </li>
         </ol>
     </nav>
+        <div class="search-icon">
+            <img src="images/icons8-search-28.png" alt="">
+        </div>
+    </div>
 
     <!-- Mobile menu -->
     <div id="mobileMenuToggle">
         <input type="checkbox" id="mobile-menu">
+        <div class="menu-container">
         <label for="mobile-menu" class="hamburger-label">
             <span></span>
             <span></span>
             <span></span>
         </label>
+        <div class="logo-mobile">
+            <img src="images/logo-mobile.png" alt="">
+        </div>
+        <div class="search-icon">
+            <img src="images/icons8-search-28.png" alt="">
+        </div>
+        </div>
 
         <nav id="mobile-nav-menu">
-            <button id="close-mobile-menu">✖ Zamknij</button>
             <ol>
                 <li><a href="#">Rodzaje olejków</a>
                     <ul>
@@ -129,8 +147,10 @@
             </ol>
         </nav>
     </div>
+
 </header>
 <script src="topbar.js"></script>
 <script src="menumobile.js"></script>
+<script src="search.js"></script>
 </body>
 </html>
