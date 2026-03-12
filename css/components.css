@@ -50,3 +50,14 @@
     width: 24px;
     opacity: 0.5;
 }
+/* BANER GLOWYNY SG */
+
+.main-banner img {
+    width: 100%;
+    height: 60vh;
+    display: block;
+
+}
+.main-banner h1 {
+    display: none;
+}
