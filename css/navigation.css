@@ -101,6 +101,7 @@
     position: relative;
     width: 100%;
     padding: 0 10px;
+    background: #1e2926;
 }
 .menu-container{
     display: flex;
@@ -150,9 +151,16 @@
 /* Mobile nav */
 #mobile-nav-menu {
     display: none;
-    background: #fff;
-    max-height: 90vh; /* ograniczenie wysokości */
+    background: #1e2926;
+    max-height: 100vh;
     overflow-y: auto;
+
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
 #mobile-nav-menu ol,
@@ -166,15 +174,15 @@
 #mobile-nav-menu li > a {
     display: block;
     padding: 10px 15px;
-    color: #308702;
+    color: #aebcab;
     text-decoration: none;
+    font-size: 20px;
 }
 
 #mobile-nav-menu li > ul {
     display: none;
     padding-left: 15px;
 }
-
 #mobile-nav-menu li.active > ul {
     display: block;
 }

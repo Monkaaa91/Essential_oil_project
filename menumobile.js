@@ -2,6 +2,7 @@
 const mobileMenuCheckbox = document.getElementById('mobile-menu');
 mobileMenuCheckbox.checked = false;
 
+
 // Rozwijanie podmenu w mobile
 document.querySelectorAll('#mobile-nav-menu > ol > li > a').forEach(link => {
     link.addEventListener('click', function(e){
