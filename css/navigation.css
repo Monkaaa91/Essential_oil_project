@@ -13,7 +13,8 @@
 #desktop-nav-menu {
     display: flex;
     justify-content: center;
-    font-size: 18px;
+    font-size: 22px;
+    font-family: Lato, sans-serif;
     flex: 1;
     height: 3em;
     line-height: 3em;
@@ -29,23 +30,23 @@
 
 #desktop-nav-menu > ol > li {
     position: relative;
-    background: #fff;
+    background: #1e2926;
     transition: background 0.3s;
 }
 
 #desktop-nav-menu > ol > li > a {
     display: block;
     padding: 0 20px;
-    color: #308702;
+    color: #aebcab;
     text-decoration: none;
 }
 
 #desktop-nav-menu > ol > li:hover {
-    background: #c7ffbe;
+    background: #7d957d;
 }
 
 #desktop-nav-menu > ol > li:hover > a {
-    color: #1ca100;
+    color: #1c3c12;
 }
 
 /* Podmenu desktop */
@@ -58,8 +59,8 @@
     top: 100%;
     left: 0;
     min-width: 100%;
-    background: #fff;
-    border: 1px solid #eee;
+    background: #1e2926;
+    border: 1px solid #1e2926;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     z-index: 999;
 }
@@ -71,10 +72,10 @@
 #desktop-nav-menu > ol > li > ul > li {
     line-height: 2.5em;
     text-align: left;
-    border-bottom: 1px solid #f9f9f9;
+    border-bottom: 1px solid #4d574a;
     white-space: nowrap;
     padding: 0 15px;
-    color: #333;
+    color: #aebcab;
     cursor: pointer;
 }
 
@@ -83,8 +84,8 @@
 }
 
 #desktop-nav-menu > ol > li > ul > li:hover {
-    background: #f2fff0;
-    color: #1ca100;
+    background: #7d957d;
+    color: #1c3c12;
 }
 
 #desktop-nav-menu > ol > li > ul > li a {

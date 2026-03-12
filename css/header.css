@@ -2,7 +2,7 @@
     position: relative;
     max-width: 100%;
     height: 40px;
-    background-color: lightgreen;
+    background-color: #4f6549;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -22,11 +22,11 @@
 }
 
 .text-top-1 {
-    color: black;
+    color: #aebcab;
 }
 
 .text-top-2 {
-    color: #000000;
+    color: #aebcab;
 }
 
 .scrolling-text span.active {
@@ -35,7 +35,7 @@
 }
 
 .top-bar a {
-    color: #029e02;
+    color: #c7ffbe;
     text-decoration: none;
 }
 
