@@ -13,12 +13,10 @@
 #desktop-nav-menu {
     display: flex;
     justify-content: center;
-    background: #fff;
-    border-bottom: 1px solid #eee;
     font-size: 18px;
+    flex: 1;
     height: 3em;
     line-height: 3em;
-    flex: 1;
 }
 
 #desktop-nav-menu ol {
@@ -26,6 +24,7 @@
     display: flex;
     padding: 0;
     margin: 0;
+    position: absolute;
 }
 
 #desktop-nav-menu > ol > li {
