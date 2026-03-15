@@ -206,36 +206,19 @@
 }
 
 /* Media queries */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     #desktop-nav-menu {
         display: none;
     }
     #mobileMenuToggle {
         display: block;
     }
-}
-@media (min-width: 769px) {
-    #mobileMenuToggle {
-        display: none;
-    }
-}
-
-/* Media queries */
-@media (max-width: 768px) {
-    #desktop-nav-menu {
-        display: none;
-    }
-    #mobileMenuToggle {
-        display: block;
-    }
-}
-@media (min-width: 769px) {
-    #mobileMenuToggle {
-        display: none;
-    }
-}
-@media (max-width: 769px) {
     .menu-desktop .search-icon {
+        display: none;
+    }
+}
+@media (min-width: 1025px) {
+    #mobileMenuToggle {
         display: none;
     }
 }

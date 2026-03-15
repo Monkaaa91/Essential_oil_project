@@ -51,13 +51,15 @@
     opacity: 0.5;
 }
 /* SEKCJA NA SG */
-
-
-.main-page{
+.hero{
     background-image: url("../images/background_herbs.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left top;
+}
+
+.main-page{
+    
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -67,14 +69,13 @@
 }
 .main-page h1 {
     font-size: 80px;
-    margin-left: 200px;
-    margin-top: 300px;
+    display: block;
     color: #9aa696;
 }
 .main-page p {
     font-size: 20px;
     padding: 30px 0;
-    margin-left: 200px;
+    display: inline;
     color: #aebcab;
     align-content: center;
     line-height: 1.5em;
@@ -82,18 +83,21 @@
 }
 /*Button Zaczynamy SG  */
 .button-main-pages{
-    display: inline-block;
-    margin-left: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     background: #aebcab;
     font-size: 20px;
+    text-align: center;
     color: #333;
     text-decoration: none;
     border-radius: 30px;
     font-family: Lato, sans-serif;
 }
+
 @media (max-width: 768px) {
-    .main-page{
+    .main-page {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -126,5 +130,41 @@
         margin-right: 0;
         margin-left: 0;
     }
-
 }
+
+
+@media (min-width: 1024px) {
+    .main-page {
+        align-items: center;
+        text-align: center;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 24px;
+        padding-top: 60px;
+    }
+    .main-page h1 {
+        font-size: 80px;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+    .main-page p {
+        font-size: 22px;
+        padding: 30px 0 0 0;
+        margin-bottom: 24px;
+        display: block;
+        text-align: center;
+    }
+    .button-main-pages {
+        margin-top: 24px;
+        align-self: center;
+        min-width: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+
