@@ -4,6 +4,12 @@
 .menu-desktop{
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Zapewnia, że menu jest zawsze na wierzchu */
+    background-color: #1e2926;
 }
 
 .search-icon{
@@ -94,15 +100,29 @@
     display: block;
 }
 
+.menu-container, .menu-desktop { 
+    position: fixed;
+    top: 40px; 
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
 /* =======================
    MOBILE MENU
 ======================= */
 #mobileMenuToggle {
-    position: relative;
+    position: fixed;
     width: 100%;
-    padding: 0 10px;
+    top: 40px;
+    z-index: 9999;
+    background-color: #1e2926;
     background: #1e2926;
+    padding: 25px 0;
+    display: none; /* Ukryty domyślnie, pokazany przez media query */
 }
+
+
 .menu-container{
     display: flex;
     justify-content:space-between;
@@ -151,16 +171,15 @@
 /* Mobile nav */
 #mobile-nav-menu {
     display: none;
-    background: #1e2926;
     max-height: 100vh;
     overflow-y: auto;
-
-
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 80px;
     left: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 9999; max-height: calc(100vh - 80px); /* Niech menu nie wychodzi poza ekran */
+    overflow-y: auto;
+
 }
 
 #mobile-nav-menu ol,
@@ -177,6 +196,7 @@
     color: #aebcab;
     text-decoration: none;
     font-size: 20px;
+    background-color: #1e2926;
 }
 
 #mobile-nav-menu li > ul {
@@ -212,6 +232,7 @@
     }
     #mobileMenuToggle {
         display: block;
+    
     }
     .menu-desktop .search-icon {
         display: none;
@@ -222,3 +243,4 @@
         display: none;
     }
 }
+

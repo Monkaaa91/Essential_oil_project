@@ -1,15 +1,15 @@
 .top-bar {
-    position: relative;
-    max-width: 100%;
+    position: fixed; /* Pasek przyklejony do samej góry */
+    top: 0;
+    left: 0;
+    width: 100%;     /* Musi mieć pełną szerokość */
     height: 40px;
     background-color: #4f6549;
-    overflow: hidden;
+    z-index: 10000;  /* Najwyższa warstwa */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10px;
     box-sizing: border-box;
-    white-space: normal;
 }
 
 .scrolling-text span {
@@ -57,3 +57,4 @@
         font-size: 11px;
     }
 }
+

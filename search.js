@@ -34,3 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+document.querySelectorAll('.search-icon img').forEach(icon => {
+    icon.addEventListener('click', e => {
+        document.getElementById('search-bar-overlay').classList.add('is-open');
+        document.getElementById('global-search-input').focus();
+        e.stopPropagation(); // żeby klik nie przeszedł przez overlay
+    });
+});

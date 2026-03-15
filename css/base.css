@@ -1,7 +1,24 @@
-body {
-    margin: 0;
-    background: #1e2926;
-}
 body p{
     font-family: Lato, sans-serif;
+
 }
+body{
+    background-color:#1e2926;
+    position:relative;
+    z-index: 0;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background-image:url("../images/background_herbs.png");
+    background-repeat:no-repeat;
+    background-position:left center;
+    background-size:900px;
+
+    opacity:0.25; 
+    pointer-events:none;
+}
+
