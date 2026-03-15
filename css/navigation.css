@@ -188,6 +188,7 @@
     list-style: none; /* usuwa bullets */
     margin: 0;
     padding: 0;
+    background: #1e2926;
 }
 
 #mobile-nav-menu li > a {
