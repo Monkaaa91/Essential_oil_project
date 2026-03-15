@@ -188,7 +188,7 @@
     list-style: none; /* usuwa bullets */
     margin: 0;
     padding: 0;
-    background: #1e2926;
+
 }
 
 #mobile-nav-menu li > a {
@@ -203,6 +203,7 @@
 #mobile-nav-menu li > ul {
     display: none;
     padding-left: 15px;
+    background: #1e2926;
 }
 #mobile-nav-menu li.active > ul {
     display: block;
