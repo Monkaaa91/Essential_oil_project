@@ -141,7 +141,7 @@
     color: #2d3436;
 }
 .detail-category {
-  color: #93c5a3; /* Dopasowane do Twojej kolorystyki */
+  color: #93c5a3; 
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -318,4 +318,137 @@
   .properties-grid h3 {
     grid-column: 1 / -1; /* Tytuł "Właściwości" zajmuje obie kolumny */
   }
+}
+/* --- Baza wiedzy o olejkach --- */
+/* Reset i podstawowe style dla sekcji */
+#wprowadzenie-olejki {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #8ba38b;
+    background-color: #1e2926;
+    padding: 60px 20px;
+    position: relative;
+    z-index: 5; 
+}
+
+/* Kontener ograniczający szerokość */
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Nagłówek sekcji */
+#wprowadzenie-olejki header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #c5dbc6;
+    padding: 40px 20px;
+}
+
+#wprowadzenie-olejki h1 {
+    font-size: 2.0rem;
+    color: #ecffe6; /* Głęboka zieleń */
+    margin-bottom: 25px;
+    margin-top: 30px;
+}
+
+#wprowadzenie-olejki h2 {
+    color: #9baa97;
+    margin-bottom: 20px;
+}
+#wprowadzenie-olejki p {
+    font-size: 1.1rem;
+    color: #aebcab;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+/* Definicja - tekst wprowadzający */
+.definition {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    color: #8a9b87;
+}
+
+/* Siatka korzyści (Grid) - magia responsywności */
+.benefits-grid {
+    display: grid;
+    /* Domyślnie 1 kolumna (mobile) */
+    grid-template-columns: 1fr; 
+    gap: 30px;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;
+}
+
+/* Karta korzyści */
+.benefit-card {
+    background: #c5dbc6;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border-top: 4px solid #a3b18a;
+    border: 1px solid #e0e0e0; 
+    padding: 20px; 
+    border-radius: 8px; 
+    text-align: center;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #172511;
+    font: bold 1.2rem 'Lato', sans-serif;
+}
+
+/* Sekcja CTA (Call to Action) */
+.cta-section {
+    margin-top: 80px;
+    text-align: center;
+    background-color: #c5dbc6;
+    padding: 50px 30px;
+    border-radius: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #6b8e23;
+    color: rgb(57, 66, 57);
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+}
+.whats-is-oil-box-2{
+    margin-top: 60px; 
+    text-align: center; 
+    background-color: #b1c7b8; 
+    padding: 40px; 
+    border-radius: 15px;
+}
+.btn-whats-oil {
+    margin-top: 15px;;
+    display: inline-block; 
+    background-color: #243f25; 
+    color: rgb(205, 216, 207); 
+    padding: 12px 25px; 
+    text-decoration: none; 
+    border-radius: 25px; 
+    font-weight: bold;
+}
+#wprowadzenie-olejki .h2-oil-box{
+    font-size: 1.8rem;
+    color: #172511;
+    margin-bottom: 20px;
+}
+#wprowadzenie-olejki .p-oil-box{
+    font-size: 1.1rem;
+    color: #172511;
+    max-width: 700px;
+    margin: 0 auto;
 }
