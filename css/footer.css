@@ -1,0 +1,9 @@
+footer{
+    background-color: #1e2926;
+    color: #aebcab;
+    text-align: center;
+    padding: 20px 0;
+    flex-shrink: 0; /* Gwarantuje, że stopka nie zostanie "ściśnięta" */
+    width: 100%;
+
+}

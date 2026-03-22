@@ -1,0 +1,321 @@
+
+/* --- STYLES DLA STRONY KOLEKCJI OLEJKÓW --- */
+/* 1. GŁÓWNA SEKCJA */
+.oils-collection {
+  flex: 1;;
+  font-family: 'Lato', sans-serif; /* Zmień na czcionkę swojej strony */
+  padding-top: 140px !important; 
+  max-width: 1200px;
+  margin: 0 auto 60px auto; /* Margin zostawiamy tylko na dole i boki */
+  position: relative;
+  z-index: 1; /* Niższy niż menu */
+
+}
+
+.collection-header {
+  
+    margin-bottom: 40px;
+}
+
+.collection-header h2 {
+  font-size: 2rem;
+  color: #c8fad7;
+  text-align: center;
+
+}
+.collection-header p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #93c5a3;
+  margin-top: 30px;
+  font-family: lato, sans-serif;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* 2. SIATKA (GRID) - MOBILE FIRST */
+.oil-grid {
+  display: grid;
+  /* Domyślnie na mobile: 2 kolumny */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* 3. KARTA OLEJKU */
+.oil-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.oil-card:hover {
+  transform: translateY(-8px);
+}
+
+/* 4. KWADRATOWE ZDJĘCIA */
+.image-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Wymusza proporcje kwadratu */
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #4f6549; /* Tło zanim załaduje się zdjęcie */
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Kadruje zdjęcie do kwadratu bez rozciągania */
+  display: block;
+}
+
+/* 5. OPISY */
+.oil-info {
+  padding: 15px 5px;
+  text-align: center;
+}
+
+.oil-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  color: #aebcab;
+}
+
+.oil-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #83a18d;
+}
+
+/* --- RESPONSIVE DESIGN (MEDIA QUERIES) --- */
+
+/* TABLET: 3 kolumny (powyżej 600px) */
+@media (min-width: 600px) {
+  .oil-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* DESKTOP: 4 kolumny (powyżej 1024px) */
+@media (min-width: 1024px) {
+  .oil-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+}
+
+/* --- STYLES DLA SZCZEGÓŁÓW PRODUKTU (DETALE) --- */
+
+.product-detail-section {
+    max-width: 1100px;
+    /* GÓRA: 180px (żeby nie było pod menu), BOKI: auto (centrowanie), DÓŁ: 60px */
+    margin: 180px auto 60px auto; 
+    
+    padding: 40px;
+    background-color: #f6ffef; 
+    position: relative;
+    z-index: 5; 
+    border-radius: 20px;
+    box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    
+    /* Zabezpieczenie przed ucinaniem boków */
+    width: calc(100% - 40px); /* Karta zajmie 100% szerokości minus mały margines bezpieczeństwa */
+}
+
+/* Nagłówek */
+.detail-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.detail-subtitle {
+  font-size: 1rem;
+  color: #83a18d;
+  margin-top: 10px;
+  font-family: 'Lato', sans-serif;
+}
+.latin-title{
+    font-style: italic;
+    color: #2d3436;
+}
+.detail-category {
+  color: #93c5a3; /* Dopasowane do Twojej kolorystyki */
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+}
+.detail-header h1 {
+  font-size: 2.8rem;
+  margin: 10px 0;
+  color: #2d3436;
+}
+.detail-divider {
+  width: 50px;
+  height: 3px;
+  background: #c8fad7;
+  margin: 0 auto;
+}
+
+/* Galeria */
+.detail-gallery-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+.detail-img-box {
+  flex: 1;
+}
+.detail-img-box img {
+  width: 100%;
+  aspect-ratio: 4 / 5; /* Wymusza proporcje 4:5 dla każdego zdjęcia */
+  object-fit: cover;   /* Wypełnia ramkę, ucinając nadmiar, zamiast zgniatać obraz */
+  object-position: center; /* Centruje kadr */
+  display: block;
+}
+
+/* Layout 2-kolumnowy */
+.detail-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 60px;
+}
+
+/* Lewa kolumna (Sidebar) */
+.spec-row {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+.spec-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #999;
+  font-weight: 700;
+}
+.spec-value {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.map-wrapper {
+  margin-top: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+.map-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+/* Prawa kolumna (Opisy) */
+.text-group { margin-bottom: 35px; }
+.text-group h3 { margin-bottom: 12px; color: #2d3436; }
+.text-group p { line-height: 1.7; color: #666; }
+
+.info-box {
+  padding: 20px;
+  background: #ebfaeb;
+  border-radius: 10px;
+}
+
+.combo-box {
+  border-left: 4px solid #c8fad7;
+  padding-left: 20px;
+}
+.helpful-tips-box{
+  background: #f9fce7;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 5px solid #f6fcad;
+}
+
+.detail-safety-alert {
+  background: #fff5f5;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 5px solid #ff7675;
+}
+.detail-safety-alert h4 { color: #d63031; margin-bottom: 10px; }
+
+/* --- RESPONSYWNOŚĆ (Media Queries) --- */
+
+/* TABLET (Poniżej 1024px) */
+@media (max-width: 1024px) {
+    .product-detail-section {
+        margin-top: 160px; /* Nieco mniejszy odstęp od góry */
+        padding: 30px;    /* Mniejszy padding wewnątrz, by odzyskać miejsce na boki */
+        width: calc(100% - 30px); /* Mniejszy margines boczny */
+    }
+
+    .detail-layout {
+        grid-template-columns: 1fr; /* Na tablecie kolumny jedna pod drugą */
+        gap: 30px;
+    }
+}
+
+/* MOBILE (Poniżej 600px) */
+@media (max-width: 600px) {
+    .product-detail-section {
+        margin-top: 140px; /* Menu na mobile jest zazwyczaj niższe */
+        margin-bottom: 30px;
+        padding: 20px;    /* Jeszcze mniejszy padding, żeby tekst nie był "ściśnięty" */
+        width: calc(100% - 20px); /* Minimalny margines boczny (po 10px na stronę) */
+        border-radius: 12px;      /* Mniejszy promień rogów lepiej wygląda na małych ekranach */
+    }
+
+    .detail-header h1 {
+        font-size: 1.8rem; /* Zmniejszamy czcionkę tytułu, żeby się nie łamała brzydko */
+    }
+
+    .detail-gallery-row {
+        flex-direction: column; /* Zdjęcia jedno pod drugim */
+        gap: 15px;
+    }
+
+    .detail-img-box img {
+        height: 250px; /* Krótsze zdjęcia na mobile, żeby nie trzeba było dużo przewijać */
+    }
+}
+/* Styl dla podgrup we właściwościach - opis */
+.prop-subgroup {
+  margin-bottom: 20px;
+  padding-left: 15px;
+  border-left: 2px solid #f0f0f0; /* Subtelna linia z boku */
+  transition: border-color 0.3s ease;
+}
+
+.prop-subgroup:hover {
+  border-left-color: #c8fad7; /* Linia zaświeci się na zielono po najechaniu */
+}
+
+.prop-subgroup h4 {
+  font-size: 0.95rem;
+  color: #93c5a3; /* Twój zielony kolor */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.prop-subgroup p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Opcjonalnie: 2 kolumny na dużym ekranie */
+@media (min-width: 768px) {
+  .properties-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .properties-grid h3 {
+    grid-column: 1 / -1; /* Tytuł "Właściwości" zajmuje obie kolumny */
+  }
+}

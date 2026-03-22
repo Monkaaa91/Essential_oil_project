@@ -55,6 +55,11 @@
 
 
 /* --- KONTENER GŁÓWNY --- */
+.hero{
+    flex: 1; /* To sprawi, że sekcja hero wypełni całą wolną przestrzeń */
+    display: flex;
+    align-items: center; /* Wycentruje zawartość hero w pionie */
+}
 .hero-content {
     display: flex;
     flex-wrap: wrap; /* Wymusza przejście do nowej linii na mobile */
@@ -63,13 +68,13 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-    min-height: 100vh;
+    min-height: auto;
    
 }
 
 /* --- TEKST --- */
 .main-page {
-    flex: 1 1 500px;
+    flex: 1 1 500px; /* Elastyczna szerokość, ale minimum 400px */
     display: flex;
     flex-direction: column;
     align-items: center; /* Wycentrowanie h1, p, button */
@@ -127,13 +132,14 @@
 
 .hero{
     padding-top:100px;
+    
 }
 
 .hero-content{
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:center;
+    justify-content:flex-start;
     text-align:center;
     gap:30px;
 }
@@ -147,6 +153,8 @@
     justify-content:center;
     text-align:center;
     padding:20px;
+    margin-bottom: 0; /* Usunięcie dolnego marginesu */
+    padding-bottom: 0; /* Usunięcie dolnego paddingu */
 }
 
 /* H1 */
@@ -175,6 +183,7 @@
     display:flex;
     justify-content:center;
     align-items:center;
+
 
 }
 

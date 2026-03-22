@@ -55,4 +55,5 @@ html, body {
 
 * {
     box-sizing: border-box; /* Ważne, żeby paddingi nie rozpychały szerokości elementów */
+
 }
