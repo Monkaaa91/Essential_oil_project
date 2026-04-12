@@ -2,8 +2,9 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Mój pierwszy projekt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Czym są olejki eteryczne? | Baza Wiedzy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../../images/favicon.png">
     <link rel="stylesheet" href="../../css/header.css">
     <link rel="stylesheet" href="../../css/base.css">
@@ -12,14 +13,15 @@
     <link rel="stylesheet" href="../../css/navigation.css">
     <link rel="stylesheet" href="../../css/components.css">
     <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="dyfuzja.css">
 </head>
 <body>
-    <div id="search-bar-overlay" class="search-overlay">
-        <div class="search-input-wrapper">
-            <input type="text" id="global-search-input" placeholder="Wpisz czego szukasz (np. olejek cytrynowy)...">
-            <button id="close-search-bar">&times;</button>
-        </div>
+<div id="search-bar-overlay" class="search-overlay">
+    <div class="search-input-wrapper">
+        <input type="text" id="global-search-input" placeholder="Szukaj w bazie wiedzy...">
+        <button id="close-search-bar">&times;</button>
     </div>
+</div>
 <header>
     <div class="top-bar">
         <div class="scrolling-text">
@@ -28,175 +30,162 @@
         </div>
     </div>
 
-    <!-- Desktop menu -->
     <div class="menu-desktop">
-    <nav id="desktop-nav-menu">
-        <ol>
-            <li><a href="#">Rodzaje olejków</a>
-                <ul>
-                    <li><a href="../category_pages/cytrusowe.html">Cytrusowe</a></li>
-                    <li><a href="../category_pages/kwiatowe.html">Kwiatowe</a></li>
-                    <li><a href="../category_pages/drzewne.html">Drzewne</a></li>
-                    <li><a href="../category_pages/ziołowe.html">Ziołowe</a></li>
-                    <li><a href="../category_pages/korzenne.html">Korzenne</a></li>
-                    <li><a href="../category_pages/żywiczne.html">Żywiczne</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Zastosowanie</a>
-                <ul>
-                    <li>Stres i emocje</li>
-                    <li>Sen</li>
-                    <li>Układ oddechowy</li>
-                    <li>Układ trawienny</li>
-                    <li>Skóra</li>
-                    <li>Mięśnie i stawy</li>
-                </ul>
-            </li>
-            <li><a href="#">Jak stosować</a>
-                <ul>
-                    <li>Dyfuzja</li>
-                    <li>Inhalacja</li>
-                    <li>Masaż</li>
-                    <li>Kąpiel</li>
-                </ul>
-            </li>
-            <li><a href="#">Bezpieczeństwo</a>
-                <ul>
-                    <li>Rozcieńczanie</li>
-                    <li>Przeciwskazania</li>
-                    <li>Dla dzieci</li>
-                    <li>W ciąży</li>
-                </ul>
-            </li>
-            <li><a href="#">Baza wiedzy</a>
-                <ul>
-                    <li>Czym są olejki eteryczne</li>
-                    <li>Jak powstają olejki eteryczne</li>
-                    <li>Jak wybrać olejek eteryczny</li>
-                </ul>
-            </li>
-        </ol>
-    </nav>
-        <div class="search-icon">
-            <img src="../../images/icons8-search-28.png" alt="">
-        </div>
-    </div>
-
-    <!-- Mobile menu -->
-    <div id="mobileMenuToggle">
-        <input type="checkbox" id="mobile-menu">
-        <div class="menu-container">
-        <label for="mobile-menu" class="hamburger-label">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <div class="logo-mobile">
-            <img src="../../images/logo-mobile.png" alt="">
-        </div>
-        <div class="search-icon">
-            <img src="../../images/icons8-search-28.png" alt="">
-        </div>
-        </div>
-
-        <nav id="mobile-nav-menu">
+        <nav id="desktop-nav-menu">
             <ol>
+                <li><a href="../../index.html">Strona główna</a></li>
                 <li><a href="#">Rodzaje olejków</a>
                     <ul>
                         <li><a href="../category_pages/cytrusowe.html">Cytrusowe</a></li>
                         <li><a href="../category_pages/kwiatowe.html">Kwiatowe</a></li>
                         <li><a href="../category_pages/drzewne.html">Drzewne</a></li>
-                        <li><a href="../category_pages/ziołowe.html">Ziołowe</a></li>
+                        <li><a href="../category_pages/ziolowe.html">Ziołowe</a></li>
                         <li><a href="../category_pages/korzenne.html">Korzenne</a></li>
-                        <li><a href="../category_pages/żywiczne.html">Żywiczne</a></li>
+                        <li><a href="../category_pages/zywiczne.html">Żywiczne</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Zastosowanie</a>
                     <ul>
-                        <li>Stres i emocje</li>
-                        <li>Sen</li>
-                        <li>Układ oddechowy</li>
-                        <li>Układ trawienny</li>
-                        <li>Skóra</li>
-                        <li>Mięśnie i stawy</li>
+                        <li><a href="../zastosowanie/stres-i-emocje.html">Stres i emocje</a></li>
+                        <li><a href="../zastosowanie/sen.html">Sen</a></li>
+                        <li><a href="../zastosowanie/uklad-oddechowy.html">Układ oddechowy</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Jak stosować</a>
                     <ul>
-                        <li>Dyfuzja</li>
-                        <li>Inhalacja</li>
-                        <li>Masaż</li>
-                        <li>Kąpiel</li>
+                        <li><a href="../jak_stosowac/dyfuzja.html">Dyfuzja</a></li>
+                        <li><a href="../jak_stosowac/inhalacja.html">Inhalacja</a></li>
+                        <li><a href="../jak_stosowac/masaz.html">Masaż</a></li>
+                        <li><a href="../jak_stosowac/kapiel.html">Kąpiel</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Bezpieczeństwo</a>
                     <ul>
-                        <li>Rozcieńczanie</li>
-                        <li>Przeciwskazania</li>
-                        <li>Dla dzieci</li>
-                        <li>W ciąży</li>
+                        <li><a href="../bezpieczenstwo/rozcienczanie.html">Rozcieńczanie</a></li>
+                        <li><a href="../bezpieczenstwo/przeciwskazania.html">Przeciwskazania</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Baza wiedzy</a>
                     <ul>
-                        <li>Czym są olejki eteryczne</li>
-                        <li>Jak powstają olejki eteryczne</li>
-                        <li>Jak wybrać olejek eteryczny</li>
+                        <li><a href="czymsaolejkieteryczne.html">Czym są olejki eteryczne</a></li>
+                        <li><a href="jak-powstaja-olejki.html">Jak powstają olejki</a></li>
+                        <li><a href="jak-wybrac-olejek.html">Jak wybrać olejek</a></li>
+                    </ul>
+                </li>
+            </ol>
+        </nav>
+        <div class="search-icon">
+            <img src="../../images/icons8-search-28.png" alt="">
+        </div>
+    </div>
+
+    <div id="mobileMenuToggle">
+        <input type="checkbox" id="mobile-menu">
+        <div class="menu-container">
+            <label for="mobile-menu" class="hamburger-label">
+                <span></span><span></span><span></span>
+            </label>
+            <div class="logo-mobile">
+                <img src="../../images/logo-mobile.png" alt="Logo">
+            </div>
+            <div class="search-icon">
+                <img src="../../images/icons8-search-28.png" alt="Szukaj">
+            </div>
+        </div>
+        <nav id="mobile-nav-menu">
+            <ol>
+                <li><a href="#">Jak stosować</a>
+                    <ul>
+                        <li><a href="../jak_stosowac/dyfuzja.html">Dyfuzja</a></li>
+                        <li><a href="../jak_stosowac/inhalacja.html">Inhalacja</a></li>
+                        <li><a href="../jak_stosowac/masaz.html">Masaż</a></li>
+                        <li><a href="../jak_stosowac/kapiel.html">Kąpiel</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Baza wiedzy</a>
+                    <ul>
+                        <li><a href="czymsaolejkieteryczne.html">Czym są olejki</a></li>
                     </ul>
                 </li>
             </ol>
         </nav>
     </div>
-
 </header>
- <section id="wprowadzenie-olejki">
-    <header>
-        <h1>Odkryj Potęgę Natury Zamkniętą w Kropli</h1>
-        <p>Poznaj olejki eteryczne – esencję roślin, która odmieni Twoje samopoczucie i domową atmosferę.</p>
-    </header>
 
-    <div class="content-wrapper">
-        
-        <article class="definition">
-            <h2>Czym właściwie są olejki eteryczne?</h2>
-            <p>
-                To naturalne, silnie skoncentrowane ekstrakty pozyskiwane z różnych części roślin: kwiatów, liści, korzeni czy kory. 
-                To "dusza" rośliny, która nie tylko pięknie pachnie, ale posiada unikalne właściwości wspierające zdrowie i emocje.
+<main class="content-wrapper">
+    <section class="page-hero-simple">
+        <div class="container">
+            <h1>Czym są olejki eteryczne?</h1>
+            <p class="subtitle">Poznaj duszę roślin zamkniętą w szklanej buteleczce.</p>
+        </div>
+    </section>
+
+    <section class="info-section-premium">
+        <div class="container">
+            <h2 class="elegant-title">Esencja natury</h2>
+            <p class="elegant-text">
+                Olejki eteryczne to naturalne, silnie skoncentrowane wyciągi z roślin.
+                Pozyskuje się je z różnych części – kwiatów, liści, nasion, kory, korzeni, a nawet żywicy.
+                Nie są to jednak zwykłe "tłuste" oleje, lecz lotne substancje organiczne, które odpowiadają
+                za charakterystyczny zapach rośliny oraz pełnią funkcje obronne i regeneracyjne w przyrodzie.
             </p>
-        </article>
-
-        <div class="benefits-grid">
-            
-            <div class="benefit-card">
-                <h3>🌿 Naturalna Terapia</h3>
-                <p>Wspierają odporność, łagodzą bóle głowy i pomagają w problemach z układem oddechowym.</p>
-            </div>
-
-            <div class="benefit-card">
-                <h3>✨ Równowaga Emocjonalna</h3>
-                <p>Redukują stres, ułatwiają zasypianie i dodają energii do działania w trudne poranki.</p>
-            </div>
-
-            <div class="benefit-card">
-                <h3>🏡 Czysty Dom</h3>
-                <p>Zastąp sztuczne odświeżacze powietrza naturalnymi aromatami o właściwościach antybakteryjnych.</p>
-            </div>
-
         </div>
+    </section>
 
-        <div class="whats-is-oil-box-2">
-            <h2 class="h2-oil-box">Gotowy na podróż zapachową?</h2>
-            <p class="p-oil-box">Zejdź niżej, aby dowiedzieć się, jak bezpiecznie używać olejków i który z nich będzie idealny dla Ciebie na start.</p>
-            <a class="btn-whats-oil" href="../category_pages/cytrusowe.html">Zobacz nasze bestsellery</a>
-        </div>
+    <div class="container">
+        <section class="benefits-grid">
+            <div class="benefit-card">
+                <span class="icon">🔬</span>
+                <h3>Złożony skład</h3>
+                <p>Każdy olejek zawiera setki naturalnych związków chemicznych, które współpracują, tworząc unikalne właściwości terapeutyczne.</p>
+            </div>
+            <div class="benefit-card">
+                <span class="icon">⚡</span>
+                <h3>Wysoka moc</h3>
+                <p>Olejki są od 50 do 70 razy silniejsze niż zioła. Jedna kropla olejku z mięty pieprzowej odpowiada ok. 28 filiżankom naparu.</p>
+            </div>
+            <div class="benefit-card">
+                <span class="icon">🛡️</span>
+                <h3>Naturalna ochrona</h3>
+                <p>W naturze olejki chronią rośliny przed bakteriami, wirusami i szkodnikami – tę samą moc możemy wykorzystać dla naszego zdrowia.</p>
+            </div>
+        </section>
 
+        <section class="premium-steps">
+            <h2 class="elegant-title">Trzy filary prawdziwego olejku</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <div class="step-content">
+                        <h4>100% Czystości</h4>
+                        <p>Prawdziwy olejek eteryczny nie zawiera syntetycznych wypełniaczy, pestycydów ani sztucznych zapachów. Jest czystym darem natury.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <div class="step-content">
+                        <h4>Klasa Terapeutyczna</h4>
+                        <p>Oznacza, że olejek został przebadany pod kątem składu chemicznego i posiada realny wpływ na nasze zdrowie i samopoczucie.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <div class="step-content">
+                        <h4>Bezpieczne Pozyskiwanie</h4>
+                        <p>Kluczowa jest metoda (destylacja parowa lub tłoczenie na zimno) oraz moment zbioru rośliny, co gwarantuje najwyższą jakość produktu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-</section>
-<script src="../../topbar.js"></script>
-<script src="../../menumobile.js"></script>
-<script src="../../search.js"></script>
+</main>
+
 <footer>
     <p>&copy; 2026 Praktyczny przewodnik po olejkach eterycznych. Wszystkie prawa zastrzeżone.</p>
 </footer>
+
+<script src="../../topbar.js"></script>
+<script src="../../menumobile.js"></script>
+<script src="../../search.js"></script>
 </body>
 </html>
