@@ -760,3 +760,248 @@
     font-size: 1.05rem;
     line-height: 1.7;
 }
+/* Styl dla kroków ostrzegawczych (Czerwone flagi) */
+/* Całkowicie nowy styl dla ikony ostrzegawczej */
+.warning-icon {
+    min-width: 50px;
+    height: 50px;
+    background-color: #a34b4b; /* Czerwony */
+    color: white;
+    border-radius: 50%; /* Idealne koło */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 25px; /* Odstęp od tekstu */
+    flex-shrink: 0; /* Żeby kółko się nie zgniatało */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    /* Usuwamy jakiekolwiek dziedziczone tła/ramki */
+    border: none !important;
+    position: relative;
+    z-index: 5;
+}
+
+/* Poprawka dla kontenera kroku, żeby ikona i tekst były w linii */
+.warning-section .step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    background: none !important; /* Usuwa tło z całego wiersza, jeśli jakieś było */
+}
+/* --- LAYOUT BEZPIECZEŃSTWA --- */
+/* --- FUNDAMENTY I ODSTĘPY --- */
+
+/* Odstęp dla stałego menu (fixed header) */
+.header-spacer {
+    height: 100px; /* Dostosuj tę wartość do wysokości Twojego menu */
+    width: 100%;
+}
+
+.safety-wrapper {
+    margin-top: 100px; /* Dostosuj tę wartość do wysokości Twojego menu */
+    background: transparent;
+    padding-bottom: 80px;
+    width: 100%;
+}
+
+/* --- HERO SEKACJA --- */
+.safety-hero {
+    background: linear-gradient(135deg, rgb(77, 87, 74) 0%, rgb(79, 101, 73) 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 0 0 40px 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.safety-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.safety-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.safety-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- KARTY I TREŚĆ --- */
+
+.safety-card-main {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.safety-card-main h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #2d4a22;
+    margin-bottom: 20px;
+}
+
+.safety-card-main p {
+    line-height: 1.8;
+    color: #444;
+    font-size: 1.1rem;
+}
+
+/* --- SIATKA ROZCIEŃCZANIA --- */
+
+.dilution-table-section {
+    margin: 60px 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #aebcab;
+    margin-bottom: 40px;
+}
+
+.dilution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.dilution-card {
+    background: white;
+    border-radius: 25px;
+    padding: 45px 30px;
+    text-align: center;
+    border: 1px solid #eef2eb;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.dilution-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.percentage {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #6b8e23;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.drops {
+    background: #f4f7f0;
+    color: #2d4a22;
+    padding: 6px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.dilution-card h4 {
+    font-size: 1.3rem;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.dilution-card.highlighted {
+    border: 2px solid #6b8e23;
+    position: relative;
+    overflow: hidden;
+}
+
+.dilution-card.warning {
+    border-top: 6px solid #a34b4b;
+}
+
+/* --- OLEJE BAZOWE --- */
+
+.carrier-oils {
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    margin-top: 80px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+}
+
+.carrier-oils h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #971e1e;
+}
+
+.carrier-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.carrier-item strong {
+    color: #2d4a22;
+    font-weight: 600;
+}
+
+.carrier-item:last-child {
+    border-bottom: none;
+}
+
+/* --- RESPONSYWNOŚĆ (TABLET & MOBILE) --- */
+
+@media (max-width: 1024px) {
+    .dilution-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .safety-hero h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-spacer {
+        height: 80px; /* Menu mobilne zazwyczaj jest niższe */
+    }
+
+    .safety-hero {
+        padding: 60px 20px;
+    }
+
+    .safety-hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .dilution-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .safety-card-main, .carrier-oils {
+        padding: 30px 20px;
+    }
+}

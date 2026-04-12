@@ -193,4 +193,264 @@
 
 }
 }
+/*=====FORMULARZ KONTAKT======= */
+/* --- KONSTRUKCJA GŁÓWNA --- */
+.contact-wrapper {
+    background: transparent;
+    padding-bottom: 100px;
+    width: 100%;
+}
 
+/* SEKACJA POWITALNA (HERO) */
+.contact-hero {
+    /* Padding-top zapewnia miejsce na fixed menu, a bottom oddech dla tekstu */
+    padding-top: 150px;
+    padding-bottom: 100px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(45, 74, 34, 0.9) 0%, rgba(74, 107, 56, 0.8) 100%);
+    color: white;
+    border-radius: 0 0 50px 50px;
+    margin-bottom: 0; /* Usuwamy margines, bo ustawimy go w kontenerze poniżej */
+}
+
+.contact-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* KONTENER Z TREŚCIĄ (DANE + FORMULARZ) */
+.contact-container {
+    display: flex;
+    gap: 40px;
+    margin: 60px auto 0 auto; /* Wyraźny odstęp od sekcji Hero */
+    max-width: 1200px;
+    padding: 0 20px;
+    align-items: stretch;
+}
+
+/* --- LEWA STRONA: INFORMACJE KONTAKTOWE --- */
+.contact-info {
+    flex: 1;
+    background: white;
+    padding: 50px 40px;
+    border-radius: 35px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.info-icon {
+    font-size: 1.8rem;
+    background: #f4f7f0;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: inset 0 0 10px rgba(107, 142, 35, 0.1);
+}
+
+.info-item h4 {
+    color: #2d4a22;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.info-item p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+.social-btn {
+    text-decoration: none;
+    color: #6b8e23;
+    font-weight: 600;
+    border: 2px solid #6b8e23;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background: #6b8e23;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* --- PRAWA STRONA: KARTA FORMULARZA --- */
+.contact-form-card {
+    flex: 1.6;
+    background: white;
+    padding: 50px;
+    border-radius: 35px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #2d4a22;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #6b8e23;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(107, 142, 35, 0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    background: #6b8e23;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #2d4a22;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(45, 74, 34, 0.2);
+}
+
+/* --- RESPONSYWNOŚĆ (TABLETY I MOBILE) --- */
+
+@media (max-width: 1024px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .contact-info, .contact-form-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero {
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-form-card {
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .social-btn {
+        text-align: center;
+    }
+}
+/* --- WIDEO W KOLUMNIE KONTAKTU --- */
+.contact-video-box {
+    margin-top: 40px; /* Odstęp od social mediów */
+    position: relative;
+    width: 100%;
+    height: 250px; /* Możesz dostosować wysokość */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.contact-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Wideo wypełni cały kontener bez rozciągania */
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(45, 74, 34, 0.3); /* Delikatny zielony filtr na wideo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; /* Pozwala klikać "przez" napis */
+}
+
+.video-overlay span {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Dostosowanie dla urządzeń mobilnych */
+@media (max-width: 768px) {
+    .contact-video-box {
+        height: 200px;
+        margin-top: 30px;
+    }
+}
