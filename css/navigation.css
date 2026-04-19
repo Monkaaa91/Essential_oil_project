@@ -1,29 +1,39 @@
 /* =======================
    DESKTOP MENU
 ======================= */
-.menu-desktop{
+/* =======================================================
+   1. USTAWIENIA WSPÓLNE
+======================================================= */
+:root {
+    --green-solid: #4f6549; /* Solidny kolor Twojej stopki */
+    --green-glass: rgba(79, 101, 73, 0.95);
+    --white: #ffffff;
+}
+
+/* =======================================================
+   2. MENU DESKTOP
+======================================================= */
+.menu-desktop {
     display: flex;
     align-items: center;
     position: fixed;
-    top: 0;
+    top: 40px !important;
     left: 0;
     width: 100%;
-    z-index: 9999; /* Zapewnia, że menu jest zawsze na wierzchu */
-    background-color: #1e2926;
-}
-
-.search-icon{
-    padding: 10px;
+    height: 70px;
+    z-index: 9999;
+    background: var(--green-glass) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #desktop-nav-menu {
     display: flex;
     justify-content: center;
-    font-size: 22px;
-    font-family: Lato, sans-serif;
-    flex: 1;
-    height: 3em;
-    line-height: 3em;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    height: 100%;
 }
 
 #desktop-nav-menu ol {
@@ -31,218 +41,177 @@
     display: flex;
     padding: 0;
     margin: 0;
-    position: absolute;
 }
 
 #desktop-nav-menu > ol > li {
     position: relative;
-    background: #1e2926;
-    transition: background 0.3s;
 }
 
 #desktop-nav-menu > ol > li > a {
     display: block;
-    padding: 0 20px;
-    color: #aebcab;
+    padding: 0 25px;
+    color: var(--white);
     text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
 }
 
 #desktop-nav-menu > ol > li:hover {
-    background: #7d957d;
+    background: rgba(255, 255, 255, 0.1);
 }
 
-#desktop-nav-menu > ol > li:hover > a {
-    color: #1c3c12;
-}
-
-/* Podmenu desktop */
-#desktop-nav-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
+/* PODKATEGORIE DESKTOP */
+#desktop-nav-menu > ol > li > ul {
+    display: none !important;
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 100%;
-    background: #1e2926;
-    border: 1px solid #1e2926;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    z-index: 999;
+    min-width: 240px;
+    background: var(--green-solid) !important;
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 
-#desktop-nav-menu li:hover > ul {
-    display: block;
-}
-
-#desktop-nav-menu > ol > li > ul > li {
-    line-height: 2.5em;
-    text-align: left;
-    border-bottom: 1px solid #4d574a;
-    white-space: nowrap;
-    padding: 0 15px;
-    color: #aebcab;
-    cursor: pointer;
-}
-
-#desktop-nav-menu > ol > li > ul > li:last-child {
-    border-bottom: none;
-}
-
-#desktop-nav-menu > ol > li > ul > li:hover {
-    background: #7d957d;
-    color: #1c3c12;
+#desktop-nav-menu > ol > li:hover > ul {
+    display: block !important;
 }
 
 #desktop-nav-menu > ol > li > ul > li a {
-    color: inherit;
-    text-decoration: none;
     display: block;
+    padding: 12px 25px;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: all 0.2s ease;
 }
 
-.menu-container, .menu-desktop { 
-    position: fixed;
-    top: 40px; 
-    left: 0;
-    width: 100%;
-    z-index: 9999;
+#desktop-nav-menu > ol > li > ul > li:hover a {
+    padding-left: 35px; /* OSCYLACJA */
+    background: rgba(255, 255, 255, 0.1);
 }
 
-/* =======================
-   MOBILE MENU
-======================= */
+/* =======================================================
+   3. MENU MOBILE [LUPKA L | LOGO C | KRESKI R]
+======================================================= */
 #mobileMenuToggle {
     position: fixed;
+    top: 40px !important;
+    left: 0;
     width: 100%;
-    top: 40px;
-    z-index: 9999;
-    background-color: #1e2926;
-    background: #1e2926;
-    padding: 25px 0;
-    display: none; /* Ukryty domyślnie, pokazany przez media query */
+    height: 60px;
+    z-index: 10000;
+    background: var(--green-solid) !important; /* Solidne tło paska */
+    display: none;
 }
 
-
-.menu-container{
+.menu-container {
     display: flex;
-    justify-content:space-between;
+    justify-content: center; /* Centruje logo */
     align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    position: relative;
 }
-.menu-container label {
-    display: inline-block;
+
+/* LUPA NA LEWO */
+.menu-container .search-icon {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 10001;
+}
+
+.search-icon svg, .search-icon i {
+    fill: var(--white) !important;
+    color: var(--white) !important;
+    width: 20px;
     height: 20px;
-    width: 25px;
-    cursor: pointer;
 }
-.menu-container label span {
+
+/* LOGO NA ŚRODKU */
+.logo-center {
+    font-size: 24px;
+    z-index: 10001;
+}
+
+/* KRESKI NA PRAWO */
+.hamburger-label {
+    position: absolute;
+    right: 20px;
+    display: block;
+    cursor: pointer;
+    width: 25px;
+    height: 18px;
+    z-index: 10001;
+}
+
+.hamburger-label span {
     display: block;
     height: 2px;
     width: 100%;
-    margin: 5px;
-}
-.menu-container label span:last-child {
-    margin-right: 0;
-}
-.menu-container .search-icon {
-    cursor: pointer;
-    flex-shrink: 0;
-    margin-right: 20px;
-}
-/* Hamburger */
-.hamburger-label {
-    display: block;
-    cursor: pointer;
-    width: 30px;
-    margin: 10px;
-}
-.hamburger-label span {
-    display: block;
-    height: 3px;
+    background-color: var(--white) !important;
     margin: 5px 0;
-    background: #308702;
-    transition: 0.4s;
 }
 
-/* Checkbox steruje widocznością menu */
-#mobileMenuToggle input#mobile-menu {
-    display: none;
+/* LOGIKA CHECKBOXA */
+input#mobile-menu {
+    display: none !important;
 }
 
-/* Mobile nav */
+/* LISTA ROZWIJANA MOBILE - BRAK PRZERWY I BRAK PRZEZROCZYSTOŚCI */
 #mobile-nav-menu {
     display: none;
-    max-height: 100vh;
-    overflow-y: auto;
     position: fixed;
-    top: 80px;
+    top: 100px; /* 40px (top-bar) + 60px (wysokość paska menu) = brak przerwy */
     left: 0;
     width: 100%;
-    z-index: 9999; max-height: calc(100vh - 80px); /* Niech menu nie wychodzi poza ekran */
+    background: var(--green-solid) !important; /* PEŁNE TŁO */
+    height: calc(100vh - 100px);
     overflow-y: auto;
-
+    z-index: 9999;
 }
 
-#mobile-nav-menu ol,
-#mobile-nav-menu ul,
-#mobile-nav-menu li {
-    list-style: none; /* usuwa bullets */
-    margin: 0;
-    padding: 0;
-
-}
-
-#mobile-nav-menu li > a {
-    display: block;
-    padding: 10px 15px;
-    color: #aebcab;
-    text-decoration: none;
-    font-size: 20px;
-    background-color: #1e2926;
-}
-
-#mobile-nav-menu li > ul {
-    display: none;
-    padding-left: 15px;
-    background: #1e2926;
-}
-#mobile-nav-menu li.active > ul {
-    display: block;
-}
-
-/* Przycisk X */
-#close-mobile-menu {
-    display: block;
-    background: none;
-    border: none;
-    color: #308702;
-    font-size: 20px;
-    padding: 10px 15px;
-    text-align: left;
-    cursor: pointer;
-}
-#close-mobile-menu:hover {
-    color: #1ca100;
-}
+/* Pokazywanie menu */
 #mobile-menu:checked ~ #mobile-nav-menu {
+    display: block !important;
+}
+
+#mobile-nav-menu li a {
     display: block;
+    padding: 15px 25px;
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-/* Media queries */
+/* PODKATEGORIE MOBILE */
+#mobile-nav-menu ul {
+    display: none !important;
+    background: rgba(0, 0, 0, 0.15); /* Subtelne odcięcie podmenu */
+}
+
+#mobile-nav-menu li.active > ul {
+    display: block !important;
+}
+
+#mobile-nav-menu li > ul > li a {
+    padding-left: 50px !important; /* OSCYLACJA */
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* =======================================================
+   4. RESPONSYWNOŚĆ
+======================================================= */
 @media (max-width: 1024px) {
-    #desktop-nav-menu {
-        display: none;
-    }
-    #mobileMenuToggle {
-        display: block;
-    
-    }
-    .menu-desktop .search-icon {
-        display: none;
-    }
-}
-@media (min-width: 1025px) {
-    #mobileMenuToggle {
-        display: none;
-    }
+    .menu-desktop { display: none !important; }
+    #mobileMenuToggle { display: flex !important; }
 }
 
+@media (min-width: 1025px) {
+    #mobileMenuToggle { display: none !important; }
+    #mobile-nav-menu { display: none !important; }
+}

@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;     /* Musi mieć pełną szerokość */
     height: 40px;
-    background-color: #4f6549;
+    background-color: #536153;
     z-index: 10000;  /* Najwyższa warstwa */
     display: flex;
     align-items: center;
