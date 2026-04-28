@@ -100,7 +100,8 @@
 .main-page h1 {
     font-size: 80px;
     color: #9aa696;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     z-index: 20; /* Nad obrazem */
     font-family: 'Lato', sans-serif;
 }
